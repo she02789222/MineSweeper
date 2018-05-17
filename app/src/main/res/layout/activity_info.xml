@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".InfoActivity">
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="370dp"
+        android:layout_height="459dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:text="This is a classic single-player puzzle game, the objective of the game is to find out all the non-bomb cells in the given time (900s). \n\nIf the time's up or the bomb cell is clicked, you lose. If the cell clicked is a digit, the digit indicates how many bombs the adjacent cells contain, if no bombs are adjacent, the cells become blank, all adjacent cells will be recursively revealed. \n\nYou can take a long-click at the non-clicked cell to set flag on it marking it might contain a bomb, the given flags are equivalent to the bombs in the board. \n\nThe number of bombs, width and height of the board are adjustable in the game setting of gear button. \n\nHope you enjoy the game!"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoText"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>

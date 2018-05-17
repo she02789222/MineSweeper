@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/helloworld"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/darker_gray"
+        android:text=" "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.slab.minesweeper.views.grid.Grid
+        android:id="@+id/minesweeperGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/helloworld">
+    </com.slab.minesweeper.views.grid.Grid>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/smile" />
+
+    <Button
+        android:id="@+id/gameSetButton"
+        android:layout_width="46dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/button"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/game_set_button"
+        android:shadowColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/digit_hundreds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toStartOf="@+id/digit_tens"
+        app:srcCompat="@drawable/zero0" />
+
+    <ImageView
+        android:id="@+id/digit_tens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toStartOf="@+id/digit_unit"
+        app:srcCompat="@drawable/zero0" />
+
+    <ImageView
+        android:id="@+id/digit_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/button"
+        android:layout_marginEnd="73dp"
+        app:srcCompat="@drawable/zero0" />
+
+    <ImageView
+        android:id="@+id/bombNumberCounterImage0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button"
+        android:layout_marginStart="118dp"
+        app:srcCompat="@drawable/zero0" />
+
+    <ImageView
+        android:id="@+id/bombNumberCounterImage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button"
+        android:layout_marginEnd="-119dp"
+        android:layout_toStartOf="@+id/bombNumberCounterImage0"
+        app:srcCompat="@drawable/zero0" />
+
+    <ImageView
+        android:id="@+id/bombNumberCounterImage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button"
+        android:layout_toStartOf="@+id/bombNumberCounterImage1"
+        app:srcCompat="@drawable/zero0" />
+
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button"
+        android:layout_marginStart="11dp"
+        android:alpha="0.5"
+        android:background="@drawable/about2" />
+
+
+</RelativeLayout>
